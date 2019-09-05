@@ -2,7 +2,7 @@
 
 ##### This project uses **MVP** and **DI** in kotlin. 
 
-### *Libraries*
+### **Libraries**
 ##### 1. Dagger2
 ##### 2. RXJava2
 ##### 3. ButterKnife
