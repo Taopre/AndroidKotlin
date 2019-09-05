@@ -4,6 +4,7 @@ import com.example.android_kotlin.di.module.*
 import com.example.android_kotlin.ui.main.MainActivity
 import com.example.android_kotlin.ui.mainTab.dogs.TabDogsFragment
 import com.example.android_kotlin.ui.mainTab.home.TabHomeFragment
+import com.example.android_kotlin.ui.mainTab.repo.TabRepoFragment
 
 import dagger.Component
 import javax.inject.Singleton
@@ -22,4 +23,6 @@ interface AppComponent {
     fun inject(activity: MainActivity)
 
     fun inject(fragment: TabDogsFragment)
+
+    fun inject(fragment: TabRepoFragment)
 }

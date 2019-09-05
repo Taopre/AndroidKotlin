@@ -2,6 +2,7 @@ package com.example.android_kotlin.di.module
 
 
 import com.example.android_kotlin.Networking.APIService
+import com.example.android_kotlin.Networking.GithubAPI
 import com.example.android_kotlin.utils.URL
 
 import dagger.Module
@@ -29,7 +30,7 @@ open class HttpModule {
     @Provides
     @Singleton
     open fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
-            .baseUrl(URL.BASE_URL)
+            .baseUrl(URL.GITHUB_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient)
@@ -37,6 +38,6 @@ open class HttpModule {
 
     @Provides
     @Singleton
-    open fun provideApiService(retrofit: Retrofit): APIService = retrofit.create(APIService::class.java)
+    open fun provideApiService(retrofit: Retrofit): GithubAPI = retrofit.create(GithubAPI::class.java)
 
 }
