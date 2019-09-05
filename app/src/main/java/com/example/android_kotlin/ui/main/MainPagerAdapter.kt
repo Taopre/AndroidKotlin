@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.android_kotlin.ui.mainTab.dogs.TabDogsFragment
 import com.example.android_kotlin.ui.mainTab.home.TabHomeFragment
+import com.example.android_kotlin.ui.mainTab.repo.TabRepoFragment
 
 class MainPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm)
 {
@@ -19,7 +20,7 @@ class MainPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm)
         {
             0 -> TabHomeFragment().newInstance()
             1 -> TabDogsFragment().newInstance()
-            else -> TabDogsFragment().newInstance()
+            else -> TabRepoFragment.newInstance("Taopre")
         }
         return fragment
     }
