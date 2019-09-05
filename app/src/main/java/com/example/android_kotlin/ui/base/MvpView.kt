@@ -34,7 +34,6 @@ interface MvpView {
 
     fun hideLoading()
 
-
     fun onError(@StringRes resId: Int)
 
     fun onError(message: String)

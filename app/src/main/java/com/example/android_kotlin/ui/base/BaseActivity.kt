@@ -18,7 +18,7 @@ import butterknife.Unbinder
 import com.example.android_kotlin.R
 
 
-abstract class  BaseActivity : AppCompatActivity(), MvpView { //}, BaseFragment.Callback {
+abstract class  BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callback {
 
    // private val mProgressDialog: ProgressDialog? = null
 
@@ -61,15 +61,15 @@ abstract class  BaseActivity : AppCompatActivity(), MvpView { //}, BaseFragment.
     }
 
 
-/*
+
     override fun onFragmentAttached() {
 
     }
 
-    override fun onFragmentDetached(tag: String) {
+    public override fun onFragmentDetached(tag: String) {
 
     }
-*/
+
 
     override fun hideKeyboard() {
         val view = this.currentFocus
